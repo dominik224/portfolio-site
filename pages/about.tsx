@@ -210,8 +210,16 @@ const about = () => {
         </ul>
       </div>
       <div className="w-[60%] h-full">
-        <div className="px-6">
-          <h1 className="text-6xl mt-4">About me:</h1>
+        <div className="px-3">
+          <div className="flex flex-row row-span-2 justify-between mb-[-60px]">
+            <h1 className="text-6xl mt-4">About me:</h1>
+            <img
+              src="/portrait.png"
+              alt="Portrait"
+              className="mr-14 border-white overflow-hidden border-[1px] border-dashed"
+              style={{ width: "250px" }}
+            />
+          </div>
           <br />
           {chapters.map((chapter, idx) => {
             return (
