@@ -1,42 +1,51 @@
 import Link from "next/link";
 import img from "../public/preview.jpg";
+import Typed from "react-typed";
 
 const animatedBg = `.animatedBg {
-      background: linear-gradient(90deg, #24fcf9, #884176, #1111bb);
+      background: linear-gradient(90deg, #ffffff, #24fcf9, #884176, #1111bb, #000000);
       background-size: 300% 300%;
       animation: gradient 6s alternate infinite;
     }
     @keyframes gradient {
       0% {
-        background-position: 0%;
+        background-position: 30%;
       }
       100% {
-        background-position: 100%;
+        background-position: 70%;
       }
     }`;
 
 export default function Home() {
   return (
-    <div className="h-full w-full">
+    <div className="h-[calc(100vh-64px)] w-[72rem]">
       <style>{animatedBg}</style>
-      <div className="animatedBg flex h-full align-center items-center rounded-md bg-white">
-        <div className="items-center  w-full m-5 text-3xl font-bold z-30">
+      <div className="animatedBg flex relative h-full align-center items-center rounded-md bg-white">
+        <div className="items-center absolute w-full m-5 text-3xl font-bold text-white z-30">
           <span>{"Hi 🤗, I'm "}</span>
-          <span className="bg-clip-text text-transparent bg-gradient-to-r from-indigo-600 from-10% via-sky-600 via-50% to-emerald-600 to-90%">
-            {"Dominik! "}
-          </span>
+          <span className="text-dblue">{"Dominik! "}</span>
           <br />
           <span>{"And I am a "}</span>
-          <span className="text-[#ffd700]">{"✨Software Engineer✨"}</span>
+          <span className="text-dyellow">
+            {"✨Software "}{" "}
+            <Typed
+              strings={["Engineer", "Developer"]}
+              typeSpeed={100}
+              backSpeed={50}
+              backDelay={2000}
+              loop
+            />
+            {"✨"}
+          </span>
           <br />
           <br />
-          <Link className="" href={"/about"}>
+          <Link className="text-dgreen" href={"/about"}>
             {"About me ->"}
           </Link>
         </div>
         <div
           style={{ backgroundImage: `url(${img})`, backgroundSize: "contain" }}
-          className=" w-full h-full"
+          className="absolute w-full h-full"
         ></div>
         {/*
         
