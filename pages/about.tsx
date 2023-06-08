@@ -23,11 +23,12 @@ const chapters = [
           <span className="text-dpink">Hey</span>, my name is{" "}
           <span className="text-dpurple">Dominik </span> Przychodni. I am a
           <span className="text-dgreen"> Software </span> Engineer with a{" "}
-          <span className="text-dorange">Master's </span>degree in Electronic
-          and Computer Engineering, I have been working professionally for a few
-          years now. I have started with various freelance projects both
-          in-person and online through sites such as fiverr. I have completed 3
-          internships with <span className="text-dblue">Intel </span>
+          <span className="text-dorange">Master&apos;s </span>degree in
+          Electronic and Computer Engineering, I have been working
+          professionally for a few years now. I have started with various
+          freelance projects both in-person and online through sites such as
+          fiverr. I have completed 3 internships with{" "}
+          <span className="text-dblue">Intel </span>
           throughout my education and since my graduation in 2022 I have been
           working there full-time.
         </p>

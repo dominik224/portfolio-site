@@ -37,10 +37,10 @@ const Navbar = () => {
     <header className="flex sticky top-0 z-50 flex-row gap-10 items-center justify-end font-[BlenderPro] font-bold text-white w-full h-16 bg-[#0d0e11]">
       <div className="invisible w-40"></div>
       <div className="cursor-pointer w-full uppercase">
-        <a href="/">
+        <Link href="/">
           Dominik Przychodni
           <span className="text-gray-400 text-lg opacity-75">©2023</span>
-        </a>
+        </Link>
       </div>
       <div className="w-full"></div>
       {items.map((item, idx) => {
