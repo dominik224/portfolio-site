@@ -15,27 +15,29 @@ const animatedBg = `.animatedBg {
         background-position: 70%;
       }
     }`;
-
+//<div className="h-[calc(100vh-64px)] w-[72rem]"></div>
 export default function Home() {
   return (
-    <div className="h-[calc(100vh-64px)] w-[72rem]">
+    <div className=" flex h-[calc(100vh-64px)] w-screen items-center justify-center">
       <style>{animatedBg}</style>
-      <div className="animatedBg flex relative h-full align-center items-center rounded-md bg-white">
-        <div className="items-center absolute w-full m-5 text-3xl font-bold text-white z-30">
+      <div className="flex w-[90%] h-[90%] align-center items-center rounded-lg bg-opacity-80 bg-red-400">
+        {/* Typing effect */}
+        <div className="items-center w-full m-5 md:ml-10 text-xl lg:text-3xl font-bold text-white z-30">
           <span>{"Hi 🤗, I'm "}</span>
           <span className="text-dblue">{"Dominik! "}</span>
           <br />
           <span>{"And I am a "}</span>
           <span className="text-dyellow">
-            {"✨Software "}{" "}
+            {"Software  "}
+            <br className="flex md:hidden" />
             <Typed
-              strings={["Engineer", "Developer"]}
+              strings={["Engineer.", "Developer."]}
               typeSpeed={100}
               backSpeed={50}
-              backDelay={2000}
+              backDelay={3000}
               loop
             />
-            {"✨"}
+            {"👨‍💻"}
           </span>
           <br />
           <br />
@@ -43,26 +45,6 @@ export default function Home() {
             {"About me ->"}
           </Link>
         </div>
-        <div
-          style={{ backgroundImage: `url(${img})`, backgroundSize: "contain" }}
-          className="absolute w-full h-full"
-        ></div>
-        {/*
-        
-        <style>
-          {`
-          .bgText {
-            color: white;
-            background-clip: text
-            -webkit-text-fill-color: white;
-            -webkit-background-clip: text;
-          }
-          `}
-        </style>
-        <div className="animatedBg absolute bgText filter invert text-[5.9px] font-mono leading-[5.9px] font-extrabold align-bottom overflow-hidden z-0">
-          {<Portrait />}
-        </div>
-        */}
       </div>
     </div>
   );
