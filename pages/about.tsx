@@ -145,8 +145,8 @@ const chapters = [
           <ul className="text-sm md:text-xl space-y-2 md:space-x-0">
             <li>C</li>
             <li>Python</li>
-            <li>Go</li>
             <li>TypeScript</li>
+            <li>C++</li>
           </ul>
         </div>
         <div className={`${skillCardStyle} bg-dblue`}>
@@ -155,7 +155,7 @@ const chapters = [
           </span>
           <ul className="text-sm md:text-xl space-y-2 md:space-x-0">
             <li>Node.js</li>
-            <li>Gin</li>
+            <li>Next.js</li>
             <li>SQL</li>
             <li>Flask</li>
           </ul>
@@ -166,7 +166,7 @@ const chapters = [
           </span>
           <ul className="text-sm md:text-xl space-y-2 md:space-x-0">
             <li>React.js</li>
-            <li>Tailwind CSS</li>
+            <li>Tailwind</li>
             <li>Grafana</li>
             <li>HTML5</li>
           </ul>
