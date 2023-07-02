@@ -7,6 +7,10 @@ module.exports = {
   ],
   theme: {
     extend: {
+      screens: {
+        'xs' : '400px',
+        'xm' : '560px',
+      },
       colors: {
         dpurple: "#9580FF",
         dgreen: "#8AFF80",
@@ -14,6 +18,7 @@ module.exports = {
         dyellow: "#FFFF80",
         dorange: "#FF9580",
         dblue: "#80FFEA",
+        bg: '#0d0e11'
       },
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
