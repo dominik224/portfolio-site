@@ -45,7 +45,7 @@ const Navbar = () => {
 
   return (
     <>
-      <header className="flex w-full sticky top-0 h-16 bg-[#0d0e11] text-white font-bold shadow-sm shadow-gray-600">
+      <header className="flex w-full sticky top-0 z-50 h-16 bg-[#0d0e11] text-white font-bold shadow-sm shadow-gray-600">
         <div className="flex w-full justify-between items-center">
           {/* Logo */}
           <Link
