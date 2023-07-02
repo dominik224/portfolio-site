@@ -72,6 +72,7 @@ const projectList: projectInfo[] = [
     link: "https://github.com/dominik224/secure-chatroom/",
     icons: [
       <Image
+        key={0}
         className={iconStyle}
         alt="Python logo"
         src="https://cdn.worldvectorlogo.com/logos/python-5.svg"
