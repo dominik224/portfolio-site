@@ -1,4 +1,6 @@
 import React, { ReactElement } from "react";
+import Image from "next/image";
+import Link from "next/link";
 import {
   SiNextdotjs,
   SiReact,
@@ -6,8 +8,6 @@ import {
   SiTailwindcss,
   SiPython,
 } from "react-icons/si";
-import Link from "next/link";
-import { ImGift } from "react-icons/im";
 
 interface projectInfo {
   title: String;
@@ -36,24 +36,28 @@ const projectList: projectInfo[] = [
     link: "https://github.com/dominik224/portfolio-site",
     icons: [
       <SiNextdotjs
+        key={0}
         title="Next.js"
         size={40}
         color={"white"}
         className={iconStyle}
       />,
       <SiReact
+        key={1}
         title="React.js"
         size={40}
         color="#61dbfb"
         className={iconStyle}
       />,
       <SiTypescript
+        key={2}
         title="TypeScript"
         size={40}
         color="#2d79c7"
         className={iconStyle}
       />,
       <SiTailwindcss
+        key={3}
         title="TailwindCSS"
         size={40}
         color="#07b6d5"
@@ -67,8 +71,9 @@ const projectList: projectInfo[] = [
     image: "./secure_chatroom-svg2.svg",
     link: "https://github.com/dominik224/secure-chatroom/",
     icons: [
-      <img
+      <Image
         className={iconStyle}
+        alt="Python logo"
         src="https://cdn.worldvectorlogo.com/logos/python-5.svg"
         width={40}
         height={40}
@@ -95,10 +100,12 @@ const projectCard = (content: projectInfo, index: number) => {
         </div>
         <div className="col-span-1"></div>
         <div className="flex justify-center items-center col-span-5">
-          <img
+          <Image
             src={`${content.image}`}
             className="shadow-[0px_0px_10px_-4px_rgba(255,255,255,1)] rounded-sm mt-4 md:mt-0"
-            alt=""
+            alt="Project image"
+            width={310}
+            height={210}
           />
         </div>
         <Link
