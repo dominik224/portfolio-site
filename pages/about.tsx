@@ -39,7 +39,7 @@ const chapters = [
     heading: "Education",
     content: (
       <>
-        <p className="text-xl md:text-2xl pb-1">
+        <p className="text-xl md:text-2xl">
           <span className="text-dgreen">University </span>of Limerick
         </p>
         <p className="md:text-xl text-lg">
@@ -54,7 +54,7 @@ const chapters = [
     heading: "Experience",
     content: (
       <>
-        <p className="text-xl md:text-2xl mb-1 mt-4">Software Engineer</p>
+        <p className="text-xl md:text-2xl">Software Engineer</p>
         <p className="text-kg pb-1">
           <span className="text-dblue">Intel</span>, Ireland, 2022 - Current
         </p>
@@ -103,11 +103,27 @@ const chapters = [
           </li>
         </ul>
         <br />
+        <p className="text-xl md:text-2xl mb-1 mt-4">Teaching Assistant</p>
+        <p className="text-lg md:text-xl pb-1">
+          <span className="text-dblue">University of Limerick</span>, Ireland,
+          2021
+        </p>
+        <ul className="list-disc text-[14px] md:text-[16px] pl-8">
+          <li>
+            Part of the Teaching staff for the{" "}
+            <span className="text-dgreen">Digital</span> Systems class.
+          </li>
+          <li>
+            Taught students how to develop, test, and validate{" "}
+            <span className="text-dyellow">Verilog</span> code during labs.
+          </li>
+        </ul>
+        <br />
         <p className="text-xl md:text-2xl mb-1 mt-4">
           Software Engineering Internships
         </p>
         <p className="text-lg md:text-xl pb-1">
-          <span className="text-dblue">Intel</span>, Ireland, 2019 - 2022
+          <span className="text-dblue">Intel</span>, Ireland, 2019 - 2021
         </p>
         <ul className="list-disc text-[14px] md:text-[16px] pl-8">
           <li>
