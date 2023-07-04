@@ -31,7 +31,7 @@ const iconStyle = "hover:scale-105";
 const projectList: projectInfo[] = [
   {
     title: "Dominik.ie",
-    body: "The site you are currently on! This site was created with Next.js + TailwindCSS. The color theme was inspired by the dracula coding theme and uses the JetBrains Mono font. I created it to give a brief summary about me and to showcase some of the personal projects I've worked on.",
+    body: "The site you are currently on! This site was created with Next.js + TailwindCSS. The color theme was inspired by the dracula coding theme and uses the JetBrains Mono font. I created it to give a brief summary about me and to showcase some of the personal projects I've worked on. It is stil a work in progress.",
     image: "/SiteThumbnail2.PNG",
     link: "https://github.com/dominik224/portfolio-site",
     icons: [
@@ -74,6 +74,7 @@ const projectList: projectInfo[] = [
       <Image
         key={0}
         className={iconStyle}
+        title={"Python 3"}
         alt="Python logo"
         src="https://cdn.worldvectorlogo.com/logos/python-5.svg"
         width={40}
@@ -136,6 +137,7 @@ const projects = () => {
   return (
     <div className="flex flex-col gap-20 items-center w-screen min-h-screen py-16">
       {projectList.map((p, idx) => projectCard(p, idx))}
+      <h1 className="text-white">More coming soon...</h1>
     </div>
   );
 };
