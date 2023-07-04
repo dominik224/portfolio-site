@@ -1,3 +1,4 @@
+import Link from "next/link";
 import React from "react";
 import { AiOutlineArrowUp } from "react-icons/ai";
 import { ImAttachment } from "react-icons/im";
@@ -60,24 +61,45 @@ const chapters = [
         </p>
         <ul className="list-disc text-[14px] md:text-[16px] pl-8">
           <li>
-            <span className="text-dpurple">Developed</span> server applications
-            used by international telecommunication providers.
+            <span className="text-dpurple">Developed</span> the{" "}
+            <span className="text-dblue">vCMTS</span>, an application used by
+            international ISPs powering the cable network.
+            <br />
+            <Link
+              className="underline italic bg-white bg-opacity-0 hover:bg-opacity-10 rounded-md p-1"
+              href="https://www.intel.com/content/www/us/en/developer/topic-technology/open/vcmts-reference-dataplane/overview.html"
+            >
+              {"Read more here! ->"}
+            </Link>
           </li>
           <li>
-            <span className="text-dgreen">Optimized</span> CPU power draw by
-            25%.
+            <span className="text-dgreen">Optimized</span> CPU power draw by 25%
+            by utilizing CPU C-state instructions and manipulating P-states.
+          </li>
+          <li>
+            Co-authored a power optimization guide for the{" "}
+            <span className="text-dblue">vCMTS</span>. <br />
+            <Link
+              className="underline italic bg-white bg-opacity-0 hover:bg-opacity-10 rounded-md p-1"
+              href={
+                "https://www.intel.com/content/www/us/en/developer/topic-technology/open/vcmts-reference-dataplane/overview.html"
+              }
+            >
+              {"Check it out! ->"}
+            </Link>
           </li>
           <li>
             Created a demonstration shown at{" "}
-            <span className="text-dorange">AngaCom 2023</span>
+            <span className="text-dorange">AngaCom 2023</span> using Python,
+            Collectd, Prometheus and Grafana.
           </li>
           <li>
-            Designed <span className="text-dpink">APIs</span> for communication
-            between various system processes.
+            Designed a <span className="text-dpink">REST API</span> for
+            communication between various system processes.
           </li>
           <li>
             <span className="text-dyellow">
-              Python, C, Go, Bash, Linux, Docker, Kubernetes
+              Python, C, Bash, Linux, Docker, Kubernetes
             </span>
           </li>
         </ul>
@@ -145,7 +167,7 @@ const chapters = [
           <ul className="text-sm md:text-xl space-y-2 md:space-x-0">
             <li>C</li>
             <li>Python</li>
-            <li>TypeScript</li>
+            <li>JavaScript</li>
             <li>C++</li>
           </ul>
         </div>
@@ -176,10 +198,10 @@ const chapters = [
             <span className="hidden md:block underline">{"Other "}</span>🧰
           </span>
           <ul className="text-sm md:text-xl space-y-2 md:space-x-0">
+            <li>Linux</li>
             <li>Git</li>
             <li>Docker</li>
-            <li>Linux</li>
-            <li>Jira</li>
+            <li>K8s</li>
           </ul>
         </div>
       </div>
