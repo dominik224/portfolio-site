@@ -1,7 +1,6 @@
 import Link from "next/link";
 import React from "react";
 import { AiOutlineArrowUp } from "react-icons/ai";
-import { ImAttachment } from "react-icons/im";
 
 const colors = {
   purple: "#9580FF",
@@ -82,7 +81,7 @@ const chapters = [
             <Link
               className="underline italic bg-white bg-opacity-0 hover:bg-opacity-10 rounded-md p-1"
               href={
-                "https://www.intel.com/content/www/us/en/developer/topic-technology/open/vcmts-reference-dataplane/overview.html"
+                "https://www.intel.com/content/www/us/en/content-details/778903/guidelines-for-optimizing-power-consumption-of-vcmts-deployments-on-intel-xeon-scalable-processors.html"
               }
             >
               {"Check it out! ->"}
