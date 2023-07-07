@@ -1,6 +1,7 @@
 import Link from "next/link";
-import React from "react";
-import { AiOutlineArrowUp } from "react-icons/ai";
+import React, { useContext } from "react";
+import { IoIosArrowUp } from "react-icons/io";
+import { DarkThemeContext } from "@/components/Layout";
 
 const colors = {
   purple: "#9580FF",
@@ -11,6 +12,13 @@ const colors = {
   blue: "#80FFEA",
 };
 
+const blueText = "drop-shadow-md text-lblue dark:text-dblue";
+const yellowText = "drop-shadow-md text-lyellow dark:text-dyellow";
+const greenText = "drop-shadow-md text-lgreen dark:text-dgreen";
+const purpleText = "drop-shadow-md text-lpurple dark:text-dpurple";
+const pinkText = "drop-shadow-md text-lpink dark:text-dpink";
+const orangeText = "drop-shadow-md text-lorange dark:text-dorange";
+
 const skillCardStyle =
   "flex flex-col gap-3 bg-opacity-70 hover:bg-opacity-[85%] rounded-lg w-full pb-4 text-center pt-4 bg-gradient-to-b";
 
@@ -20,15 +28,15 @@ const chapters = [
     content: (
       <>
         <p className="text-lg md:text-xl">
-          <span className="text-dpink">Hey</span>, my name is{" "}
-          <span className="text-dpurple">Dominik </span> Przychodni. I am a
-          <span className="text-dgreen"> Software </span> Engineer with a{" "}
-          <span className="text-dorange">Master&apos;s </span>degree in
-          Electronic and Computer Engineering, I have been working
+          <span className={pinkText}>Hey</span>, my name is{" "}
+          <span className={purpleText}>Dominik </span> Przychodni. I am a
+          <span className={greenText}> Software </span> Engineer with a{" "}
+          <span className={orangeText}>Master&apos;s </span>
+          degree in Electronic and Computer Engineering, I have been working
           professionally for a few years now. I have started with various
           freelance projects both in-person and online through sites such as
           fiverr. I have completed 3 internships with{" "}
-          <span className="text-dblue">Intel </span>
+          <span className={blueText}>Intel </span>
           throughout my education and since my graduation in 2022 I have been
           working there full-time.
         </p>
@@ -40,11 +48,11 @@ const chapters = [
     content: (
       <>
         <p className="text-xl md:text-2xl">
-          <span className="text-dgreen">University </span>of Limerick
+          <span className={greenText}>University </span>of Limerick
         </p>
         <p className="md:text-xl text-lg">
-          <span className="text-dpink">Master of Engineering </span>in
-          Electronic and Computer Engineering
+          <span className={pinkText}>Master of Engineering </span>in Electronic
+          and Computer Engineering
         </p>
         <p className="text-md">Graduated With First Class Honours, 2022</p>
       </>
@@ -56,12 +64,12 @@ const chapters = [
       <>
         <p className="text-xl md:text-2xl">Software Engineer</p>
         <p className="text-kg pb-1">
-          <span className="text-dblue">Intel</span>, Ireland, 2022 - Current
+          <span className={blueText}>Intel</span>, Ireland, 2022 - Current
         </p>
         <ul className="list-disc text-[14px] md:text-[16px] pl-8">
           <li>
-            <span className="text-dpurple">Developed</span> the{" "}
-            <span className="text-dblue">vCMTS</span>, an application used by
+            <span className={purpleText}>Developed</span> the{" "}
+            <span className={blueText}>vCMTS</span>, an application used by
             international ISPs powering the cable network.
             <br />
             <Link
@@ -72,12 +80,12 @@ const chapters = [
             </Link>
           </li>
           <li>
-            <span className="text-dgreen">Optimized</span> CPU power draw by 25%
+            <span className={greenText}>Optimized</span> CPU power draw by 25%
             by utilizing CPU C-state instructions and manipulating P-states.
           </li>
           <li>
             Co-authored a power optimization guide for the{" "}
-            <span className="text-dblue">vCMTS</span>. <br />
+            <span className={blueText}>vCMTS</span>. <br />
             <Link
               className="underline italic bg-white bg-opacity-0 hover:bg-opacity-10 rounded-md p-1"
               href={
@@ -89,15 +97,15 @@ const chapters = [
           </li>
           <li>
             Created a demonstration shown at{" "}
-            <span className="text-dorange">AngaCom 2023</span> using Python,
+            <span className={orangeText}>AngaCom 2023</span> using Python,
             Collectd, Prometheus and Grafana.
           </li>
           <li>
-            Designed a <span className="text-dpink">REST API</span> for
+            Designed a <span className={pinkText}>REST API</span> for
             communication between various system processes.
           </li>
           <li>
-            <span className="text-dyellow">
+            <span className={yellowText}>
               Python, C, Bash, Linux, Docker, Kubernetes
             </span>
           </li>
@@ -105,17 +113,19 @@ const chapters = [
         <br />
         <p className="text-xl md:text-2xl mb-1 mt-4">Teaching Assistant</p>
         <p className="text-lg md:text-xl pb-1">
-          <span className="text-dblue">University of Limerick</span>, Ireland,
-          2021
+          <span className="text-lblue dark:text-dblue">
+            University of Limerick
+          </span>
+          , Ireland, 2021
         </p>
         <ul className="list-disc text-[14px] md:text-[16px] pl-8">
           <li>
             Part of the Teaching staff for the{" "}
-            <span className="text-dgreen">Digital</span> Systems class.
+            <span className={greenText}>Digital</span> Systems class.
           </li>
           <li>
             Taught students how to develop, test, and validate{" "}
-            <span className="text-dyellow">Verilog</span> code during labs.
+            <span className={yellowText}>Verilog</span> code during labs.
           </li>
         </ul>
         <br />
@@ -123,27 +133,27 @@ const chapters = [
           Software Engineering Internships
         </p>
         <p className="text-lg md:text-xl pb-1">
-          <span className="text-dblue">Intel</span>, Ireland, 2019 - 2021
+          <span className={blueText}>Intel</span>, Ireland, 2019 - 2021
         </p>
         <ul className="list-disc text-[14px] md:text-[16px] pl-8">
           <li>
-            <span className="text-dpurple">Developing</span> server application
+            <span className={purpleText}>Developing</span> server application
             connecting end-users to the
-            <span className="text-dpink"> 5G</span> network.
+            <span className={pinkText}> 5G</span> network.
           </li>
           <li>
-            <span className="text-dgreen">Developed</span> and{" "}
-            <span className="text-dblue">deployed</span> large-scale packet
-            generation system for <span className="text-dyellow">testing</span>{" "}
-            and <span className="text-dyellow">demonstration</span>.
+            <span className={greenText}>Developed</span> and{" "}
+            <span className={blueText}>deployed</span> large-scale packet
+            generation system for <span className={yellowText}>testing</span>{" "}
+            and <span className={yellowText}>demonstration</span>.
           </li>
           <li>
-            <span className="text-dgreen">Led</span> the winning teams in
+            <span className={greenText}>Led</span> the winning teams in
             2020-2021 in the annual Intel{" "}
-            <span className="text-dpurple">STEM</span> Challenge.
+            <span className={purpleText}>STEM</span> Challenge.
           </li>
           <li>
-            <span className="text-dyellow">
+            <span className={yellowText}>
               Python, C, JavaScript, Linux, Bash
             </span>
           </li>
@@ -153,16 +163,16 @@ const chapters = [
           Full Stack Software Engineer
         </p>
         <p className="text-xl pb-1">
-          <span className="text-dblue">jumpAgrade</span>, Ireland, 2018 - 2019
+          <span className={blueText}>jumpAgrade</span>, Ireland, 2018 - 2019
         </p>
         <ul className="list-disc text-[14px] md:text-[16px] pl-8">
           <li>
-            <span className="text-dgreen">Designing</span> and{" "}
-            <span className="text-dpink">Developing</span> web application used
-            by the start-up in its early stages.
+            <span className={greenText}>Designing</span> and{" "}
+            <span className={pinkText}>Developing</span> web application used by
+            the start-up in its early stages.
           </li>
           <li>
-            <span className="text-dyellow">
+            <span className={yellowText}>
               JavaScript, Python, Node.js, CSS, HTML
             </span>
           </li>
@@ -225,26 +235,39 @@ const chapters = [
 ];
 
 const about = () => {
+  const { darkTheme } = useContext(DarkThemeContext);
+  const theme = darkTheme ? "dark text-light" : "text-dark";
+
   return (
-    <div className="w-full flex flex-row row-span-3 justify-start md:justify-center text-white min-h-screen h-full">
+    <div
+      className={`w-full flex flex-row row-span-3 justify-start md:justify-center min-h-screen h-full ${theme}`}
+    >
       <div className="hidden lg:flex flex-col justify-start items-start text-xl">
         <ul className="fixed left-[10px] lg:left-[5rem] top-[13.4rem]">
           <li className="text-gray-400 hover:text-gray-200">
             <a
-              className="cursor-pointer"
+              className={`cursor-pointer ${
+                darkTheme
+                  ? "text-gray-400 hover:text-light"
+                  : "text-dark hover:text-gray-500"
+              }`}
               onClick={(e) => {
                 e.preventDefault();
                 scrollTo({ top: 0, behavior: "smooth" });
               }}
             >
-              <AiOutlineArrowUp size={"1.5rem"} fontStyle={"bold"} />
+              <IoIosArrowUp size={"1.5rem"} fontStyle={"bold"} />
             </a>
           </li>
           {chapters.map((chapter, idx) => {
             return (
               <li
                 key={idx}
-                className="text-gray-400 hover:text-gray-200 cursor-pointer"
+                className={`cursor-pointer ${
+                  darkTheme
+                    ? "text-gray-400 hover:text-light"
+                    : "text-dark hover:text-gray-500"
+                }`}
                 onClick={(e) => {
                   e.preventDefault();
                   let hero = document.getElementById(chapter.heading);
@@ -270,7 +293,7 @@ const about = () => {
                 id={chapter.heading}
                 className="pt-[4rem] pb-[-2rem]"
               >
-                <h2 className="pb-2 text-gray-400 text-2xl md:text-3xl">
+                <h2 className="pb-2 text-gray-500 dark:text-gray-400 text-2xl md:text-3xl">
                   <a
                     href={`#${chapter.heading}`}
                     onClick={(e) => {
@@ -282,7 +305,7 @@ const about = () => {
                     {chapter.heading}
                   </a>
                 </h2>
-                <div className="text-gray-100 text-lg">{chapter?.content}</div>
+                <div className="text-lg">{chapter?.content}</div>
               </div>
             );
           })}

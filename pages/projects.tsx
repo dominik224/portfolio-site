@@ -1,4 +1,4 @@
-import React, { ReactElement } from "react";
+import React, { ReactElement, useContext } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import {
@@ -6,8 +6,8 @@ import {
   SiReact,
   SiTypescript,
   SiTailwindcss,
-  SiPython,
 } from "react-icons/si";
+import { DarkThemeContext } from "@/components/Layout";
 
 interface projectInfo {
   title: String;
@@ -18,8 +18,8 @@ interface projectInfo {
 }
 
 const borderColors = [
-  "border-dpink",
-  "border-dgreen",
+  "border-lpink dark:border-dpink",
+  "border-lgreen dark:border-dgreen",
   "border-dpurple",
   "border-dblue",
   "border-dyellow",
@@ -85,20 +85,22 @@ const projectList: projectInfo[] = [
 ];
 
 const projectCard = (content: projectInfo, index: number) => {
-  const mainStyle = `flex flex-col sm:w-[90%] md:w-[80%] lg:w-[55%] rounded-[19px] border-2 px-8 py-6 ${
-    borderColors[index % borderColors.length]
-  }`;
+  const { darkTheme } = useContext(DarkThemeContext);
+
+  const mainStyle = `flex flex-col sm:w-[90%] md:w-[80%] lg:w-[55%] rounded-[19px] border-2 px-8 py-6 ease-in-out duration-300 ${
+    darkTheme ? "dark" : ""
+  } ${borderColors[index % borderColors.length]}`;
 
   return (
     <div key={index} className={mainStyle}>
-      <h1 className="text-white pb-2 text-2xl">
+      <h1 className="pb-2 text-2xl dark:text-light text-dark">
         {content.title}
         <br />
         <hr className="pb-2" />
       </h1>
-      <div className="flex-col md:grid gap-3 grid-cols-12 grid-rows-10">
+      <div className="flex-col md:grid gap-3 grid-cols-12 grid-rows-10 dark:text-light text-dark">
         <div className="row-span-7 col-span-6 ">
-          <p className="text-white text-[1rem]">{content.body}</p>
+          <p className="text-[1rem]">{content.body}</p>
         </div>
         <div className="col-span-1"></div>
         <div className="flex justify-center items-center col-span-5">
@@ -116,7 +118,7 @@ const projectCard = (content: projectInfo, index: number) => {
           className="flex items-center justify-center md:justify-start md:items-end md:text-end align-bottom col-span-7"
         >
           {content.link && (
-            <span className="text-white underline md:no-underline text-2xl px-2 pt-4 pb-6 md:p-2 hover:underline hover:cursor-pointer hover:scale-105">
+            <span className="underline md:no-underline text-2xl px-2 pt-4 pb-6 md:p-2 hover:underline hover:cursor-pointer hover:scale-105">
               {"GitHub ->"}
             </span>
           )}
@@ -137,7 +139,7 @@ const projects = () => {
   return (
     <div className="flex flex-col gap-20 items-center w-screen min-h-screen py-16">
       {projectList.map((p, idx) => projectCard(p, idx))}
-      <h1 className="text-white">More coming soon...</h1>
+      <h1 className="">More coming soon...</h1>
     </div>
   );
 };

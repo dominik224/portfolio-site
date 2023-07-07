@@ -1,7 +1,8 @@
 import Link from "next/link";
-import React, { useMemo, useRef, useState } from "react";
+import React, { useContext, useState } from "react";
 import { AiFillGithub, AiFillLinkedin } from "react-icons/ai";
 import { RxHamburgerMenu } from "react-icons/rx";
+import { DarkThemeContext } from "../Layout";
 
 const items = [
   {
@@ -33,19 +34,24 @@ const items = [
   },
 ];
 
-// bg-[#0d0e11]
-//<header className="flex sticky top-0 z-50 font-[BlenderPro] font-bold text-white w-full h-16 bg-red-400">*/}
-
 const Navbar = () => {
+  const { darkTheme, toggleDarkTheme } = useContext(DarkThemeContext);
   const [menuOpen, setMenuOpen] = useState<Boolean>(false);
 
   const toggleMenu = () => {
     setMenuOpen(!menuOpen);
   };
 
+  const animation = "ease-in-out duration-300 ";
+  const darkClass = "bg-dark text-light " + animation;
+  const lightClass = "bg-light text-dark " + animation;
+  const theme = darkTheme ? darkClass : lightClass;
+
   return (
     <>
-      <header className="flex w-full sticky top-0 z-50 h-16 bg-[#0d0e11] text-white font-bold shadow-sm shadow-gray-600">
+      <header
+        className={`flex w-full sticky top-0 z-50 h-16 font-bold shadow-sm shadow-gray-600 ${theme}`}
+      >
         <div className="flex w-full justify-between items-center">
           {/* Logo */}
           <Link
@@ -69,17 +75,34 @@ const Navbar = () => {
                   key={idx}
                   href={item.href}
                   target={item?.target}
-                  className="uppercase text-lg rounded-lg bg-white bg-opacity-0 hover:bg-opacity-10 py-2 px-2 md:px-3"
+                  className={`uppercase text-lg rounded-lg bg-opacity-0 hover:bg-opacity-10 py-2 px-2 md:px-3 ${
+                    darkTheme ? "bg-light" : "bg-dark"
+                  }`}
                 >
                   {item.icon ? <item.icon size={26} /> : item.label}
                 </Link>
               );
             })}
+            <div
+              onClick={() => toggleDarkTheme()}
+              className={`flex items-center rounded-xl h-5 w-10 my-auto ml-3 cursor-pointer ease-in-out duration-300 ${
+                darkTheme ? "bg-light justify-start" : " bg-dark justify-end"
+              }`}
+            >
+              <div
+                className={`h-4 w-4 rounded-2xl mx-1 ${
+                  darkTheme ? "bg-dark" : "bg-light"
+                }`}
+              ></div>
+            </div>
           </div>
         </div>
       </header>
+      {/* Phone screen select tab */}
       {menuOpen && (
-        <div className="w-full fixed top-16 z-50 h-fit flex flex-col gap-2 font-bold text-2xl bg-inherit text-white uppercase">
+        <div
+          className={`w-full fixed top-16 z-50 h-fit flex flex-col gap-2 font-bold text-2xl bg-inherit uppercase ${theme}`}
+        >
           {items.map((item, idx) => {
             return (
               <Link
@@ -92,6 +115,17 @@ const Navbar = () => {
               </Link>
             );
           })}
+          <div
+            onClick={() => {
+              toggleDarkTheme();
+              toggleMenu();
+            }}
+            className="flex p-2 pr-5 shadow-sm shadow-gray-600 justify-end"
+          >
+            <span className="normal-case">
+              {darkTheme ? "setTheme('light')" : "setTheme('dark')"}
+            </span>
+          </div>
         </div>
       )}
     </>
