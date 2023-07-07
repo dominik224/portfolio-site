@@ -234,7 +234,7 @@ const chapters = [
   },
 ];
 
-const about = () => {
+const About = () => {
   const { darkTheme } = useContext(DarkThemeContext);
   const theme = darkTheme ? "dark text-light" : "text-dark";
 
@@ -316,4 +316,4 @@ const about = () => {
   );
 };
 
-export default about;
+export default About;

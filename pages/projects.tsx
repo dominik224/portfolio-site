@@ -84,28 +84,28 @@ const projectList: projectInfo[] = [
   },
 ];
 
-const projectCard = (content: projectInfo, index: number) => {
+const ProjectCard = (props: { content: projectInfo; index: number }) => {
   const { darkTheme } = useContext(DarkThemeContext);
 
   const mainStyle = `flex flex-col sm:w-[90%] md:w-[80%] lg:w-[55%] rounded-[19px] border-2 px-8 py-6 ease-in-out duration-300 ${
     darkTheme ? "dark" : ""
-  } ${borderColors[index % borderColors.length]}`;
+  } ${borderColors[props.index % borderColors.length]}`;
 
   return (
-    <div key={index} className={mainStyle}>
+    <div className={mainStyle}>
       <h1 className="pb-2 text-2xl dark:text-light text-dark">
-        {content.title}
+        {props.content.title}
         <br />
         <hr className="pb-2" />
       </h1>
       <div className="flex-col md:grid gap-3 grid-cols-12 grid-rows-10 dark:text-light text-dark">
         <div className="row-span-7 col-span-6 ">
-          <p className="text-[1rem]">{content.body}</p>
+          <p className="text-[1rem]">{props.content.body}</p>
         </div>
         <div className="col-span-1"></div>
         <div className="flex justify-center items-center col-span-5">
           <Image
-            src={`${content.image}`}
+            src={`${props.content.image}`}
             className="shadow-[0px_0px_10px_-4px_rgba(255,255,255,1)] rounded-sm mt-4 md:mt-0"
             alt="Project image"
             width={310}
@@ -113,11 +113,11 @@ const projectCard = (content: projectInfo, index: number) => {
           />
         </div>
         <Link
-          href={`${content.link}`}
+          href={`${props.content.link}`}
           target="_blank"
           className="flex items-center justify-center md:justify-start md:items-end md:text-end align-bottom col-span-7"
         >
-          {content.link && (
+          {props.content.link && (
             <span className="underline md:no-underline text-2xl px-2 pt-4 pb-6 md:p-2 hover:underline hover:cursor-pointer hover:scale-105">
               {"GitHub ->"}
             </span>
@@ -125,7 +125,7 @@ const projectCard = (content: projectInfo, index: number) => {
         </Link>
         <div className="flex items-center justify-center col-span-5">
           <div className="flex flex-row gap-4 scale-110 md:scale-100">
-            {content.icons.map((icon, idx) => {
+            {props.content.icons.map((icon, idx) => {
               return <div key={idx}>{icon}</div>;
             })}
           </div>
@@ -138,7 +138,9 @@ const projectCard = (content: projectInfo, index: number) => {
 const projects = () => {
   return (
     <div className="flex flex-col gap-20 items-center w-screen min-h-screen py-16">
-      {projectList.map((p, idx) => projectCard(p, idx))}
+      {projectList.map((p, idx) => (
+        <ProjectCard key={idx} content={p} index={idx} />
+      ))}
       <h1 className="">More coming soon...</h1>
     </div>
   );
