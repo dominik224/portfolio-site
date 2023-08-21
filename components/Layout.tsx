@@ -1,5 +1,6 @@
-import React, { createContext, useState } from "react";
+import React, { createContext, useEffect, useLayoutEffect, useState } from "react";
 import Navbar from "./layout/Navbar";
+import { json } from "stream/consumers";
 
 interface LayoutProps {
   children: React.ReactNode;
@@ -14,8 +15,14 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
   const [darkTheme, setDarkTheme] = useState<boolean>(true);
 
   const toggleDarkTheme = () => {
+    window.localStorage.setItem('darkTheme', JSON.stringify(!darkTheme));
     setDarkTheme(!darkTheme);
   };
+
+  useLayoutEffect(() => {
+    let darkTheme = JSON.parse(window.localStorage.getItem('darkTheme') ?? 'true');
+    setDarkTheme(darkTheme);
+  }, []);
 
   return (
     <>
