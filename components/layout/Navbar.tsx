@@ -59,7 +59,7 @@ const Navbar = () => {
             href="/"
           >
             Dominik Przychodni
-            <span className="text-gray-400 opacity-75">©2023</span>
+            <span className="text-gray-400 opacity-75">©2024</span>
           </Link>
 
           {/* Phone screen menu */}

@@ -28,18 +28,7 @@ const chapters = [
     content: (
       <>
         <p className="text-lg md:text-xl">
-          <span className={pinkText}>Hey</span>, my name is{" "}
-          <span className={purpleText}>Dominik </span> Przychodni. I am a
-          <span className={greenText}> Software </span> Engineer with a{" "}
-          <span className={orangeText}>Master&apos;s </span>
-          degree in Electronic and Computer Engineering, I have been working
-          professionally for a few years now. I have started with various
-          freelance projects both in-person and online through sites such as
-          fiverr. I have completed 3 internships with{" "}
-          <span className={blueText}>Intel </span>
-          throughout my education and since my graduation in 2022 I have been
-          working there full-time.
-        </p>
+        <span className={pinkText}>Hello</span>, my name is <span className={greenText}>Dominik Przychodni</span>. I hold a Master's degree in Electronic and Computer Engineering and have several years of professional experience as a <span className={orangeText}>Software Engineer</span>. My career began with various freelance projects, both in-person and online. During my university studies, I completed three internships at <span className={blueText}>Intel</span>, where I continued to work full-time post-graduation. Most recently, I have been employed as a backend engineer in <span className={yellowText}>Toronto</span>. Currently, I am back in Ireland and actively seeking new opportunities.</p>
       </>
     ),
   },
@@ -63,14 +52,28 @@ const chapters = [
     content: (
       <>
         <p className="text-xl md:text-2xl">Software Engineer</p>
-        <p className="text-kg pb-1">
-          <span className={blueText}>Intel</span>, Ireland, 2022 - Current
+        <p className="text-kg md:text-xl pb-1">
+          <span className={blueText}>iManage</span>, Toronto, Canada, 2023 - 2024
+        </p>
+        <ul className="list-disc text-[14px] md:text-[16px] pl-8">
+            <li>Engineered backend solutions for the <span className={blueText}>Closing Folders</span> application using the <span className={greenText}>Django Rest Framework</span></li>
+            <li>Designed and delivered new features with <span className={purpleText}>zero-downtime</span> trunk-based deployments</li>
+          <li>
+            <span className={yellowText}>
+              Python, Django, DRF, Postgresql, AWS
+            </span>
+            </li>
+            </ul>
+        <br/>
+        <p className="text-xl md:text-2xl">Software Engineer</p>
+        <p className="text-kg md:text-xl pb-1">
+          <span className={blueText}>Intel</span>, Ireland, 2022 - 2023
         </p>
         <ul className="list-disc text-[14px] md:text-[16px] pl-8">
           <li>
             <span className={purpleText}>Developed</span> the{" "}
             <span className={blueText}>vCMTS</span>, an application used by
-            international ISPs powering the cable network.
+            international ISPs powering the cable network
             <br />
             <Link
               className="underline italic bg-white bg-opacity-0 hover:bg-opacity-10 rounded-md p-1"
@@ -81,11 +84,11 @@ const chapters = [
           </li>
           <li>
             <span className={greenText}>Optimized</span> CPU power draw by 25%
-            by utilizing CPU C-state instructions and manipulating P-states.
+            by utilizing CPU C-state instructions and manipulating P-states
           </li>
           <li>
             Co-authored a power optimization guide for the{" "}
-            <span className={blueText}>vCMTS</span>. <br />
+            <span className={blueText}>vCMTS</span> <br />
             <Link
               className="underline italic bg-white bg-opacity-0 hover:bg-opacity-10 rounded-md p-1"
               href={
@@ -98,11 +101,11 @@ const chapters = [
           <li>
             Created a demonstration shown at{" "}
             <span className={orangeText}>AngaCom 2023</span> using Python,
-            Collectd, Prometheus and Grafana.
+            Collectd, Prometheus and Grafana
           </li>
           <li>
             Designed a <span className={pinkText}>REST API</span> for
-            communication between various system processes.
+            communication between various system processes
           </li>
           <li>
             <span className={yellowText}>
@@ -112,7 +115,7 @@ const chapters = [
         </ul>
         <br />
         <p className="text-xl md:text-2xl mb-1 mt-4">Teaching Assistant</p>
-        <p className="text-lg md:text-xl pb-1">
+        <p className="text-kg md:text-xl pb-1">
           <span className="text-lblue dark:text-dblue">
             University of Limerick
           </span>
@@ -121,36 +124,36 @@ const chapters = [
         <ul className="list-disc text-[14px] md:text-[16px] pl-8">
           <li>
             Part of the Teaching staff for the{" "}
-            <span className={greenText}>Digital</span> Systems class.
+            <span className={greenText}>Digital</span> Systems class
           </li>
           <li>
             Taught students how to develop, test, and validate{" "}
-            <span className={yellowText}>Verilog</span> code during labs.
+            <span className={yellowText}>Verilog</span> code during labs
           </li>
         </ul>
         <br />
         <p className="text-xl md:text-2xl mb-1 mt-4">
           Software Engineering Internships
         </p>
-        <p className="text-lg md:text-xl pb-1">
+        <p className="text-kg md:text-xl pb-1">
           <span className={blueText}>Intel</span>, Ireland, 2019 - 2021
         </p>
         <ul className="list-disc text-[14px] md:text-[16px] pl-8">
           <li>
             <span className={purpleText}>Developing</span> server application
             connecting end-users to the
-            <span className={pinkText}> 5G</span> network.
+            <span className={pinkText}> 5G</span> network
           </li>
           <li>
             <span className={greenText}>Developed</span> and{" "}
             <span className={blueText}>deployed</span> large-scale packet
             generation system for <span className={yellowText}>testing</span>{" "}
-            and <span className={yellowText}>demonstration</span>.
+            and <span className={yellowText}>demonstration</span>
           </li>
           <li>
             <span className={greenText}>Led</span> the winning teams in
             2020-2021 in the annual Intel{" "}
-            <span className={purpleText}>STEM</span> Challenge.
+            <span className={purpleText}>STEM</span> Challenge
           </li>
           <li>
             <span className={yellowText}>
@@ -162,14 +165,14 @@ const chapters = [
         <p className="text-xl md:text-2xl mb-1 mt-4">
           Full Stack Software Engineer
         </p>
-        <p className="text-xl pb-1">
+        <p className="text-kg md:text-xl pb-1">
           <span className={blueText}>jumpAgrade</span>, Ireland, 2018 - 2019
         </p>
         <ul className="list-disc text-[14px] md:text-[16px] pl-8">
           <li>
             <span className={greenText}>Designing</span> and{" "}
             <span className={pinkText}>Developing</span> web application used by
-            the start-up in its early stages.
+            the start-up in its early stages
           </li>
           <li>
             <span className={yellowText}>
@@ -190,10 +193,10 @@ const chapters = [
             👨‍💻
           </span>
           <ul className="text-sm md:text-xl space-y-2 md:space-x-0">
-            <li>C</li>
             <li>Python</li>
+            <li>Golang</li>
             <li>JavaScript</li>
-            <li>C++</li>
+            <li>C</li>
           </ul>
         </div>
         <div className={`${skillCardStyle} bg-dblue`}>
@@ -201,10 +204,10 @@ const chapters = [
             <span className="hidden md:block underline">{"Backend "}</span>📡
           </span>
           <ul className="text-sm md:text-xl space-y-2 md:space-x-0">
-            <li>Node.js</li>
-            <li>Next.js</li>
-            <li>SQL</li>
+            <li>Django</li>
+            <li>Postgresql</li>
             <li>Flask</li>
+            <li>Next.js</li>
           </ul>
         </div>
         <div className={`${skillCardStyle} bg-dgreen`}>
@@ -212,10 +215,10 @@ const chapters = [
             <span className="hidden md:block underline">{"Frontend "}</span>👨‍🎨
           </span>
           <ul className="text-sm md:text-xl space-y-2 md:space-x-0">
-            <li>React.js</li>
-            <li>Tailwind</li>
-            <li>Grafana</li>
-            <li>HTML5</li>
+          <li>HTML5</li>
+          <li>React.js</li>
+          <li>Tailwind</li>
+          <li>Grafana</li>
           </ul>
         </div>
         <div className={`${skillCardStyle} bg-dpurple`}>
@@ -223,10 +226,10 @@ const chapters = [
             <span className="hidden md:block underline">{"Other "}</span>🧰
           </span>
           <ul className="text-sm md:text-xl space-y-2 md:space-x-0">
-            <li>Linux</li>
-            <li>Git</li>
+            <li>AWS</li>
+            <li>Kubernetes</li>
             <li>Docker</li>
-            <li>K8s</li>
+            <li>Git</li>
           </ul>
         </div>
       </div>
