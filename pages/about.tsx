@@ -28,7 +28,7 @@ const chapters = [
     content: (
       <>
         <p className="text-lg md:text-xl">
-        <span className={pinkText}>Hello</span>, my name is <span className={greenText}>Dominik Przychodni</span>. I hold a Master's degree in Electronic and Computer Engineering and have several years of professional experience as a <span className={orangeText}>Software Engineer</span>. My career began with various freelance projects, both in-person and online. During my university studies, I completed three internships at <span className={blueText}>Intel</span>, where I continued to work full-time post-graduation. Most recently, I have been employed as a backend engineer in <span className={yellowText}>Toronto</span>. Currently, I am back in Ireland and actively seeking new opportunities.</p>
+        <span className={pinkText}>Hello</span>, my name is <span className={greenText}>Dominik Przychodni</span>. I hold a Master&apos;s degree in Electronic and Computer Engineering and have several years of professional experience as a <span className={orangeText}>Software Engineer</span>. My career began with various freelance projects, both in-person and online. During my university studies, I completed three internships at <span className={blueText}>Intel</span>, where I continued to work full-time post-graduation. Most recently, I have been employed as a backend engineer in <span className={yellowText}>Toronto</span>. Currently, I am back in Ireland and actively seeking new opportunities.</p>
       </>
     ),
   },
