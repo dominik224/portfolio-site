@@ -31,7 +31,7 @@ const iconStyle = "hover:scale-105";
 const projectList: projectInfo[] = [
   {
     title: "Dominik.ie",
-    body: "The site you are currently on! This site was created with Next.js + TailwindCSS. The color theme was inspired by the dracula coding theme and uses the JetBrains Mono font. I created it to give a brief summary about me and to showcase some of the personal projects I've worked on. It is stil a work in progress.",
+    body: "The site you are currently on! This site was created with Next.js + TailwindCSS. The color theme was inspired by the dracula coding theme and uses the JetBrains Mono font. I created it to give a brief summary about me and to showcase some of the personal projects I've worked on. It is still a work in progress...",
     image: "/SiteThumbnail2.PNG",
     link: "https://github.com/dominik224/portfolio-site",
     icons: [
